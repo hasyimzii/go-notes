@@ -1,4 +1,4 @@
-\restrict DenzohhkAtQwuUcgqmUexeKTqZZ7tlNP0o49ctUjz3g58kSQkaf3sifE8xgFZzj
+\restrict 9reaiPcjOz0QnMkSYoVAZTflGKdQjbzPVMgWUIkr3NGijO7OdAiv6lwJYYvPOvJ
 
 -- Dumped from database version 16.10 (Ubuntu 16.10-0ubuntu0.24.04.1)
 -- Dumped by pg_dump version 16.10 (Ubuntu 16.10-0ubuntu0.24.04.1)
@@ -13,6 +13,20 @@ SET check_function_bodies = false;
 SET xmloption = content;
 SET client_min_messages = warning;
 SET row_security = off;
+
+--
+-- Name: pgcrypto; Type: EXTENSION; Schema: -; Owner: -
+--
+
+CREATE EXTENSION IF NOT EXISTS pgcrypto WITH SCHEMA public;
+
+
+--
+-- Name: EXTENSION pgcrypto; Type: COMMENT; Schema: -; Owner: -
+--
+
+COMMENT ON EXTENSION pgcrypto IS 'cryptographic functions';
+
 
 --
 -- Name: set_updated_at(); Type: FUNCTION; Schema: public; Owner: -
@@ -353,7 +367,7 @@ ALTER TABLE ONLY public.notifications
 -- PostgreSQL database dump complete
 --
 
-\unrestrict DenzohhkAtQwuUcgqmUexeKTqZZ7tlNP0o49ctUjz3g58kSQkaf3sifE8xgFZzj
+\unrestrict 9reaiPcjOz0QnMkSYoVAZTflGKdQjbzPVMgWUIkr3NGijO7OdAiv6lwJYYvPOvJ
 
 
 --
@@ -364,4 +378,5 @@ INSERT INTO public.schema_migrations (version) VALUES
     ('20251020173019'),
     ('20251020184429'),
     ('20251020184500'),
-    ('20251020184526');
+    ('20251020184526'),
+    ('20251021080616');
