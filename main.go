@@ -1,15 +1,14 @@
 package main
 
-import "github.com/gin-gonic/gin"
+import (
+	"github.com/gin-gonic/gin"
+	"github.com/hasyimzii/go-notes/routes"
+)
 
 func main() {
-	router := gin.Default()
+	r := gin.Default()
 
-	router.GET("/", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"message": "pong",
-		})
-	})
+	routes.V1Routes(r)
 
-	router.Run("localhost:3000")
+	r.Run("localhost:3000")
 }
