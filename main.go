@@ -8,7 +8,8 @@ import (
 func main() {
 	r := gin.Default()
 
-	routes.V1Routes(r)
+	api := r.Group("/api")
+	routes.ApiRoutes(api)
 
 	r.Run("localhost:3000")
 }

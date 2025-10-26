@@ -5,7 +5,7 @@ import (
 	"github.com/hasyimzii/go-notes/handlers"
 )
 
-func V1Routes(r *gin.Engine) {
+func ApiRoutes(r *gin.RouterGroup) {
 	// Notes
 	noteGroup := r.Group("/notes")
 	{
